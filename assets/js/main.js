@@ -32,82 +32,82 @@ var picker = new Lightpick({
   },
 });
 
-// /* ================================================*/
-// /* Error Monitoring */
+// // /* ================================================*/
+// // /* Error Monitoring */
 
-Highcharts.chart("monitoring-bar", {
-  chart: {
-    type: "spline",
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false,
-    scrollablePlotArea: {
-      minWidth: 600,
-      scrollPositionX: 1,
-    },
-  },
-  title: {
-    text: null,
-    align: "left",
-  },
-  xAxis: {
-    type: "datetime",
-    title: {
-      text: null,
-    },
-  },
-  yAxis: {
-    minorGridLineWidth: 1,
-    gridLineWidth: 1,
-    alternateGridColor: null,
-  },
-  colors: ["#128DFE", "#FF0000"],
-  plotOptions: {
-    spline: {
-      lineWidth: 4,
-      states: {
-        hover: {
-          lineWidth: 5,
-        },
-      },
-      marker: {
-        enabled: false,
-      },
-      pointInterval: 3600000, // one hour
-      pointStart: Date.UTC(2018, 1, 13, 0, 0, 0),
-    },
-  },
-  series: [
-    {
-      name: "",
-      data: [3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0],
-    },
-    {
-      name: "",
-      data: [0, 0, 0, 0, 0, 0, 0, 0],
-    },
-  ],
-  navigation: {
-    menuItemStyle: {
-      fontSize: "10px",
-    },
-  },
-  credits: {
-    enabled: false,
-  },
-  yAxis: {
-    title: {
-      text: null,
-    },
-  },
-  exporting: {
-    buttons: {
-      contextButton: {
-        enabled: false,
-      },
-    },
-  },
-});
+// Highcharts.chart("monitoring-bar", {
+//   chart: {
+//     type: "spline",
+//     plotBackgroundColor: null,
+//     plotBorderWidth: null,
+//     plotShadow: false,
+//     scrollablePlotArea: {
+//       minWidth: 600,
+//       scrollPositionX: 1,
+//     },
+//   },
+//   title: {
+//     text: null,
+//     align: "left",
+//   },
+//   xAxis: {
+//     type: "datetime",
+//     title: {
+//       text: null,
+//     },
+//   },
+//   yAxis: {
+//     minorGridLineWidth: 1,
+//     gridLineWidth: 1,
+//     alternateGridColor: null,
+//   },
+//   colors: ["#128DFE", "#FF0000"],
+//   plotOptions: {
+//     spline: {
+//       lineWidth: 4,
+//       states: {
+//         hover: {
+//           lineWidth: 5,
+//         },
+//       },
+//       marker: {
+//         enabled: false,
+//       },
+//       pointInterval: 3600000, // one hour
+//       pointStart: Date.UTC(2018, 1, 13, 0, 0, 0),
+//     },
+//   },
+//   series: [
+//     {
+//       name: "",
+//       data: [3.7, 3.3, 3.9, 5.1, 3.5, 3.8, 4.0, 5.0],
+//     },
+//     {
+//       name: "",
+//       data: [0, 0, 0, 0, 0, 0, 0, 0],
+//     },
+//   ],
+//   navigation: {
+//     menuItemStyle: {
+//       fontSize: "10px",
+//     },
+//   },
+//   credits: {
+//     enabled: false,
+//   },
+//   yAxis: {
+//     title: {
+//       text: null,
+//     },
+//   },
+//   exporting: {
+//     buttons: {
+//       contextButton: {
+//         enabled: false,
+//       },
+//     },
+//   },
+// });
 
 // zb
 function hideBtnFunction() {
