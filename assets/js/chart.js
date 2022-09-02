@@ -1626,66 +1626,66 @@ var chart = new ApexCharts(
 );
 chart.render();
 
-/* ================================================*/
-/* ================================================*/
-/* ========================Highcharts========================*/
-/* ================================================*/
-/* ================================================*/
+// /* ================================================*/
+// /* ================================================*/
+// /* ========================Highcharts========================*/
+// /* ================================================*/
+// /* ================================================*/
 
-/* ================================================*/
-/* Current inventory product mix */
+// /* ================================================*/
+// /* Current inventory product mix */
 
-Highcharts.chart("product-mix", {
-  chart: {
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false,
-    type: "pie",
-  },
-  title: {
-    text: null,
-  },
-  legend: {
-    enabled: false,
-  },
-  tooltip: {
-    pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
-  },
-  series: [
-    {
-      name: "Composition",
-      colorByPoint: true,
-      innerSize: "70%",
-      data: [
-        {
-          name: "Regular Gas 42.04K",
-          color: "#0D6ABF",
-          y: 78,
-        },
-        {
-          name: "Premium Gas 16.53K",
-          color: "#12239E",
-          y: 40,
-        },
-        {
-          name: "ULSD 4.4K",
-          color: "#E044A7",
-          y: 20,
-        },
-      ],
-    },
-  ],
-  exporting: {
-    buttons: {
-      contextButton: {
-        enabled: false,
-      },
-    },
-  },
-  credits: {
-    enabled: false,
-  },
-  yAxis: {
-    gridLineColor: "transparent",
-  },
-});
+// Highcharts.chart("product-mix", {
+//   chart: {
+//     plotBackgroundColor: null,
+//     plotBorderWidth: null,
+//     plotShadow: false,
+//     type: "pie",
+//   },
+//   title: {
+//     text: null,
+//   },
+//   legend: {
+//     enabled: false,
+//   },
+//   tooltip: {
+//     pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
+//   },
+//   series: [
+//     {
+//       name: "Composition",
+//       colorByPoint: true,
+//       innerSize: "70%",
+//       data: [
+//         {
+//           name: "Regular Gas 42.04K",
+//           color: "#0D6ABF",
+//           y: 78,
+//         },
+//         {
+//           name: "Premium Gas 16.53K",
+//           color: "#12239E",
+//           y: 40,
+//         },
+//         {
+//           name: "ULSD 4.4K",
+//           color: "#E044A7",
+//           y: 20,
+//         },
+//       ],
+//     },
+//   ],
+//   exporting: {
+//     buttons: {
+//       contextButton: {
+//         enabled: false,
+//       },
+//     },
+//   },
+//   credits: {
+//     enabled: false,
+//   },
+//   yAxis: {
+//     gridLineColor: "transparent",
+//   },
+// });
