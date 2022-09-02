@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Welcome to LYNX!</title>
+</head>
+<link rel="stylesheet" href="assets/css/apexcharts.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<body>
+  <main>
+
+    <!--======================Top Navigation============================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+      <div class="container-fluid">
+        <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-text-paragraph" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </a>
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav  me-auto ms-auto ">
+            <li class="nav-item pe-5">
+              <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="submit_order.html">Submit Orders</a>
+            </li>
+            <li class="nav-item pe-5">
+              <a class="nav-link" href="order_status.html">Order Status</a>
+            </li>
+            <li class="nav-item position-relative ">
+              <a class="nav-link " href="order-management.html">Order Management</a>
+              <div class="custrom-badge">2 <span>New</span> </div>
+              </span>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav me-6">
+            <li class="nav-item hide-lg">
+              <div class="circuler-avater">
+                <span>FH</span>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+              <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+                Flint Hill
+              </a>
+              <!-- ?cus-nav-right-side -->
+              <div class="cus-nav-right-side">
+                <div class="side-appbar d-block">
+                  <div class="navbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                      </li>
+                      <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                      <li class="nav-item dropdown side-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Billing
+                        </a>
+                        <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                          <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                          <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                          <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                          <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                          
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+    </nav>
+    <!--==========================Mobail Side Menu==========================-->
+    <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+      tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="side-appbar">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+              </li>
+              <!-- Sub Menu -->
+              <li class="nav-item dropdown side-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Carriers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                  <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contacts.html">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--==========================Main Body Side Menu==========================-->
+    <div class="main-body">
+      <!-- side appbar -->
+      <div class="side-appbar">
+        <div class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="terminals.html">Terminals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customers.html">Customers</a>
+            </li>
+            <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+            <li class="nav-item dropdown side-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carriers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+
+      <div class="body-content">
+        <div class="wrapper-body">
+          <section class="LYNX">
+            <div class="container">
+              <div class="section-title">
+                <h1>Welcome to LYNX!</h1>
+                <p>Use LYNX Insights to explore key points of information and make better business
+                  decisions.</p>
+              </div>
+              <div class="filter-insights">
+                <div class="dropdown-container">
+                  <div class="filter"  id="trailer-dropdown-icon">
+                    <h4>Filter Insights</h4>
+                    <p>Inventory values reflect estimated current liftable inventories. Closed orders
+                      reflect net
+                      values.
+                    </p>
+                    <a href="#">
+                      <i for="openDropdown" class="dropdown icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="16" class="bi bi-chevron-up"
+                          viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg>
+                      </i>
+                    </a>
+                  </div>
+                  <div class="dropdown-menu" id="trailer-data">
+                    <div class="menu-group">
+                      <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                          <div class="item">
+                            <p>FIELD</p>
+                            <select name="potencial" id="potencial" class="custom-select sources"
+                              placeholder="Slect Field">
+                              <option value="1">Terminal</option>
+                              <option value="2">Tank</option>
+                              <option value="3">Product</option>
+                              <option value="3">Customer</option>
+                              <option value="3">Carrier</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                          <div class="item">
+                            <p>OPERATOR</p>
+                            <select name="potencial" id="potencial" class="custom-select sources" placeholder="Equals">
+                              <option selected>Equals</option>
+                              <option value="1">Does not Equal</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                          <div class="VALUE">
+                            <div class="item">
+                              <p>VALUE <span>(Multiple values can be added)</span></p>
+                              <div class="trash">
+                                <select name="potencial" id="potencial" class="custom-select sources select-trash"
+                                  placeholder="Select values">
+                                  <option value="1">All Terminals</option>
+                                  <option value="2">Bluewing One</option>
+                                  <option value="3">Bluewing Royal</option>
+                                </select>
+                                <a href="">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                    class="bi bi-trash3" viewBox="0 0 16 16">
+                                    <path
+                                      d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z" />
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="add-filter-btn">
+                    <a href="" class="add-btn">+ Add Filter</a> <span>(Examples: Product = Regular
+                      Gasoline, Tank =
+                      12)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="LYNX-overview">
+                <div class="container">
+                  <div class="overview-menu">
+                    <ul class="nav">
+                      <li><a class="active" href="index.html">Overview</a></li>
+                      <li><a href="forecast.html">Forecast</a></li>
+                      <li><a href="carriers.html">Carriers</a></li>
+                      <li><a href="inventory_values.html">Inventory Values</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="LYNX-content">
+                    <div id="overview">
+                      <div class="row">
+                        <!-- item -->
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="tab-group">
+                                <div class="tab-item">
+                                  <h6>Current Liftable Inventory</h6>
+                                  <h4>101.22K BBLS</h4>
+                                </div>
+                                <div class="tab-data">
+                                  <div class="data">
+                                    <p>Premium Gasoline</p>
+                                    <h4>7.73K <span>BBLS</span></h4>
+                                  </div>
+                                  <div class="data">
+                                    <p>Regular Gasoline</p>
+                                    <h4>7.73K <span>BBLS</span></h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- item -->
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="tab-group">
+                                <div class="shipments">
+                                  <h6>Today's Shipments</h6>
+                                  <div class="shipments-progress">
+                                    <div class="closed">
+                                      <h5>20.23K BBLS</h5>
+                                      <p>20.23K BBLS</p>
+                                    </div>
+                                    <div class="expected">
+                                      <h5>20.23K BBLS</h5>
+                                      <p>20.23K BBLS</p>
+                                    </div>
+                                  </div>
+                                  <div class="progress">
+                                    <div class="bar" style="width:35%">
+                                    </div>
+                                  </div>
+                                  <div class="grow">
+                                    <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                          fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd"
+                                            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                                        </svg>21%</span>
+                                      From yesterday</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- item -->
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                          <div class="card">
+                            <div class="card-body">
+                              <div class="tab-group">
+                                <div class="shipments-month">
+                                  <h6>Shipments This Month</h6>
+                                  <div class="grow">
+                                    <h5>292.13K BBLS</h5>
+                                    <p><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                          fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                          <path fill-rule="evenodd"
+                                            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                                        </svg>21%</span>
+                                      From yesterday</p>
+                                  </div>
+                                </div>
+                                <div id="bar-one"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="wrapper">
+                        <div class="row big-chart">
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Inventory timeline</h3>
+                              <div class="chart" id="brush"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Current liftable inventory by tank</h3>
+                              <div class="chart" id="bar"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row big-chart">
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Current inventory product mix</h3>
+                              <div class="chart" id="product-mix"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box chart-li">
+                              <h3>Current Inventory by Tank</h3>
+                              <div class="tabile-list chart">
+                                <ul class="list header-list">
+                                  <!-- <li class="color-box color-100" style="min-width: 50px"></li> -->
+                                  <li>Tank</li>
+                                  <li>Product</li>
+                                  <li>Inventory</li>
+                                  <li>Capacity</li>
+                                  <li>Gravity</li>
+                                  <li>PPG</li>
+                                </ul>
+                                <ul class="list">
+                                  <li class="color-box color-100"></li>
+                                  <li>10</li>
+                                  <li>ULSD</li>
+                                  <li>4399</li>
+                                  <li>25,079</li>
+                                  <li>41.00</li>
+                                  <li>7.00</li>
+                                </ul>
+                                <ul class="list">
+                                  <li class="color-box color-200"></li>
+                                  <li>10</li>
+                                  <li>ULSD</li>
+                                  <li>4399</li>
+                                  <li>25,079</li>
+                                  <li>41.00</li>
+                                  <li>7.00</li>
+                                </ul>
+                                <ul class="list">
+                                  <li class="color-box color-300"></li>
+                                  <li>10</li>
+                                  <li>ULSD</li>
+                                  <li>4399</li>
+                                  <li>25,079</li>
+                                  <li>41.00</li>
+                                  <li>7.00</li>
+                                </ul>
+                                <ul class="list">
+                                  <li class="color-box color-400"></li>
+                                  <li>10</li>
+                                  <li>ULSD</li>
+                                  <li>4399</li>
+                                  <li>25,079</li>
+                                  <li>41.00</li>
+                                  <li>7.00</li>
+                                </ul>
+                                <ul class="list">
+                                  <li class="color-box color-500"></li>
+                                  <li>10</li>
+                                  <li>ULSD</li>
+                                  <li>4399</li>
+                                  <li>25,079</li>
+                                  <li>41.00</li>
+                                  <li>7.00</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row big-chart">
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Shipments this month</h3>
+                              <div class="chart" id="brush-two"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Shipments this month by tank</h3>
+                              <div class="chart" id="bar-two"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row big-chart">
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Shipments this month by product</h3>
+                              <div class="chart" id="bar-three"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="box">
+                              <h3>Shipments this month by customer</h3>
+                              <div class="chart" id="bar-four"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+  </main>
+
+  <!-- script -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/apexcharts.min.js"></script>
+  <script src="assets/js/lightpick.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
+
+</body>
+
+</html>

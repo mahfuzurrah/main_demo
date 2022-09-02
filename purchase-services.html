@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>trailers</title>
+</head>
+
+<body>
+  <main>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++ Top Navigation +++++++++++++++=============================
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+   <!--======================Top Navigation============================-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-light header">
+    <div class="container-fluid">
+      <a class="side-appbar-icon " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+        aria-controls="offcanvasScrolling">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+          class="bi bi-text-paragraph" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </a>
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo.png" alt=""><span>LYNX Console</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav  me-auto ms-auto ">
+          <li class="nav-item pe-5">
+            <a class="nav-link active" aria-current="page" href="index.html">Insights</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="submit_order.html">Submit Orders</a>
+          </li>
+          <li class="nav-item pe-5">
+            <a class="nav-link" href="order_status.html">Order Status</a>
+          </li>
+          <li class="nav-item position-relative ">
+            <a class="nav-link " href="order-management.html">Order Management</a>
+            <div class="custrom-badge">2 <span>New</span> </div>
+            </span>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav me-6">
+          <li class="nav-item hide-lg">
+            <div class="circuler-avater">
+              <span>FH</span>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown navbarDropdown-btn position-relative" style="cursor: pointer;">
+            <a class="nav-link dropdown-toggle" onclick="showNavRight()">
+              Flint Hill
+            </a>
+            <!-- ?cus-nav-right-side -->
+            <div class="cus-nav-right-side">
+              <div class="side-appbar d-block">
+                <div class="navbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="profile_setting.html">Profile Settings</a>
+                    </li>
+                    <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+                    <li class="nav-item dropdown side-dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Billing
+                      </a>
+                      <ul class="dropdown-menu  cus-nav-right-dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="purchase-services.html">Purchase services</a></li>
+                        <li><a class="dropdown-item" href="products-licenses.html">Your products and licenses</a></li>
+                        <li><a class="dropdown-item" href="payment-history.html">Payment history</a></li>
+                        <li><a class="dropdown-item" href="payment-methods.html">Payment methods</a></li>
+                        <li><a class="dropdown-item" href="billing-notifications.html">Billing notificatin</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="login-pass.html">Log out</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+
+  </nav>
+    <!--++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Mobail Side Menu  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="offcanvas offcanvas-side-appbar offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+      tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="side-appbar">
+          <div class="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="suppliers.html">Suppliers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="customers.html">Customers</a>
+              </li>
+              <!-- Sub Menu -->
+              <li class="nav-item dropdown side-dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Carriers
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                  <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                  <li><a class="dropdown-item" href="trailers.html">Trailers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="destinations.html">Destinations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="contacts.html">Contacts</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ======================+++++++++++++  Main Body  +++++++++++++++==========================   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+    <div class="main-body">
+      <!-- side appbar -->
+      <div class="side-appbar">
+        <div class="navbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="terminals.html">Terminals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="suppliers.html">Suppliers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacts.html">Customers</a>
+            </li>
+            <!--!+++++++++++++++ Sub Menu +++++++++++++++++++++-->
+            <li class="nav-item dropdown side-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Carriers
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="drivers.html">Drivers</a></li>
+                <li><a class="dropdown-item" href="entities.html">Entities </a></li>
+                <li><a class="dropdown-item" href="trailers.html">Trailers </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contacts.html">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- !++++++++++++++  body contant ++++++++++++++++++++++++-->
+      <div class="body-content">
+            <div class="pp-header-area pt-3 pb-4">
+                <h2>Purchase services</h2>
+            </div>
+        
+       <div class="purchase-services-body mt-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col px-3 mb-3">
+                <h5>Order Status</h5>
+                <p>A real-time status service that allows users to track each order they are associated with at the terminal. LYNX status gives users transparency into terminal operations and replaces the need for calls and emails for status updates. Enjoy access to the same level of data terminal operators have when it comes to order status.</p>
+                <h6 class="my-3">From $200/month</h6>
+                <button class="secound-btn border-radious mb-3">Select</button>
+                <div><a class="link" href="#">Buy licenses for other entities</a></div>
+            </div>
+            <div class="col  px-3 mb-3">
+              <div class="d-flex justify-content-between align-items-cente">
+                <h5 class="mb-0">Carrier Insights</h5>
+                <button class="btn btn-purple">Coming soon</button>
+              </div>
+              
+              <p class="my-3">Measure the performance of the carriers your business interacts with. Unlock in-depth business intelligence reporting, KPIs, and our trailer database.</p>
+              <button class=" secound-btn border-radious mb-3" disabled>Select</button>
+          </div>
+          <div class="col  px-3 mb-3">
+            <div class="d-flex justify-content-between align-items-cente">
+              <h5 class="mb-0">Error Insights</h5>
+              <button class="btn btn-purple">Coming soon</button>
+            </div>          
+            <p class="my-3">Understand why orders did not close. Error insights logs orders that were scheduled but did not load and provides the reason. Save time spent tracking down the root of an issue and get the answers you are looking for directly from LYNX. </p>
+            <button class=" secound-btn border-radious mb-3" disabled>Select</button>
+        </div>
+        </div>
+       </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- script -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom_jquery.js"></script>
+</body>
+
+</html>
